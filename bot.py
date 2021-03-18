@@ -5,7 +5,6 @@ import discord
 import datetime
 from random import randint
 from discord.ext import commands
-from discord.ext.commands import bot
 from discord.ext.commands import CommandNotFound
 
 client = commands.Bot(command_prefix="*")
