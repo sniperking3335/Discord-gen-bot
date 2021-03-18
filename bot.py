@@ -1,4 +1,3 @@
-import os
 import names
 import random
 import string
@@ -10,9 +9,6 @@ from discord.ext.commands import bot
 from discord.ext.commands import CommandNotFound
 
 client = commands.Bot(command_prefix="*")
-
-os.system('cls')
-os.system('title Discord generator bot')
 
 @client.event
 async def on_ready():
@@ -64,19 +60,6 @@ async def windows(ctx):
     await ctx.author.send(myline)
 
 @client.command()
-async def spam_nitro(ctx):
-    await ctx.send('spamming nitros in your dm')
-    for _i in range(10):
-        nitro = "https://discord.gift/" + ('').join(random.choices(string.ascii_letters + string.digits, k=16))
-        await ctx.author.send(f'{nitro}')
-    await ctx.send('done')
-
-@client.command()
-async def valid_nitro_gen(ctx):
-    await ctx.send('check your dms')
-    await ctx.author.send('discord.gift/YouThought')
-
-@client.command()
 async def gplay(ctx):
     gplay = ('').join(random.choices(string.ascii_uppercase + string.digits, k=4))
     gplay2 = ('').join(random.choices(string.ascii_uppercase + string.digits, k=4))
@@ -99,8 +82,4 @@ async def cc(ctx):
     await ctx.send('Generated a unchecked credit card, check your dms')
     await ctx.author.send(f'credit card number: 43{cc} {cc2} {cc3} {cc4}\ncvv: {cvv}\nFull name: {name}\nExpiry date: {date}')
 
-@client.command()
-async def HowToBreakBedrockInSkyblock(ctx):
-    await ctx.send('1.Buy a stonk from end island(500k)\n2.Go to ur island and find a bedrock\n3.Break it')
-
-client.run('ODE5NTkwOTE3MTEwMzY2Mjc5.YEo1hQ.iqOItmgWkNgTwGRC0lPwEfvox3k')
+client.run(''+token)
