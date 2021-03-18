@@ -53,13 +53,6 @@ async def steam(ctx):
     print(f'Steam key > {steam}-{steam2}-{steam3}')
 
 @client.command()
-async def windows(ctx):
-    lines = open('F:\keys.txt').read().splitlines()
-    myline = random.choice(lines)
-    await ctx.send('Check your dms. All keys are valid')
-    await ctx.author.send(myline)
-
-@client.command()
 async def gplay(ctx):
     gplay = ('').join(random.choices(string.ascii_uppercase + string.digits, k=4))
     gplay2 = ('').join(random.choices(string.ascii_uppercase + string.digits, k=4))
