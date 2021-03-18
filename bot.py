@@ -10,11 +10,12 @@ from discord.ext.commands import CommandNotFound
 
 client = commands.Bot(command_prefix="*")
 
+token = input('Bot token:')
+
 @client.event
 async def on_ready():
     await client.change_presence(activity=discord.Activity(type=discord.ActivityType.listening, name="*help"))
     print('bot online')
-
 
 @client.event
 async def on_command_error(ctx, error):
